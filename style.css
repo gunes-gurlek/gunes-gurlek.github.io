@@ -3,107 +3,155 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Color Palette: Warm Brown & Clean White/Cream */
+:root {
+    --bg-main: #fdfbf7;        /* Sıcak Krem / Beyaz */
+    --bg-card: #ffffff;        /* Saf Beyaz Kartlar */
+    --bg-nav: #faf6f0;         /* Yumuşak Krem Header */
+    --text-primary: #3d2b1f;   /* Koyu Çikolata Kahvesi */
+    --text-secondary: #6e5745; /* Tatlı Sütlü Kahve */
+    --accent-brown: #8b5a2b;   /* Sıcak Kahve Vurgu */
+    --accent-dark: #5c3a1e;    /* Derin Kahve */
+    --border-color: #e6ded5;   /* İnce Krem Sınır Çizgisi */
 }
 
 body {
-    background-color: #0f172a;
-    color: #f8fafc;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 1.5rem;
 }
 
+.section-padding {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+/* Header & Navbar */
 header {
-    background-color: #1e293b;
+    background-color: var(--bg-nav);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(61, 43, 31, 0.05);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #38bdf8;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-brown);
     text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
 .nav-links a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #38bdf8;
+    color: var(--accent-brown);
 }
 
-/* Hero & Profil Resmi Alanı */
-.hero {
-    min-height: 70vh;
+/* 1. Welcome Section */
+.hero-welcome {
+    min-height: 50vh;
     display: flex;
     align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 4rem;
 }
 
-.hero-profile-img img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
-}
-
-.hero-content {
-    flex: 1;
-    min-width: 300px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
+.welcome-content h1 {
+    font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
 
 .highlight {
-    color: #38bdf8;
+    color: var(--accent-brown);
 }
 
-.hero h2 {
-    color: #94a3b8;
-    font-size: 1.3rem;
+.welcome-content h2 {
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
 
-.hero-buttons {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.welcome-content p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
 }
 
+/* 2. About Section */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.profile-img-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-brown);
+    box-shadow: 0 0 15px rgba(139, 90, 43, 0.2);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
 .btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.4rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    transition: all 0.3s;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -111,69 +159,131 @@ nav {
     cursor: pointer;
 }
 
-.btn-cv {
-    background-color: #10b981;
-    color: white;
-}
-
-.btn-cv:hover {
-    background-color: #059669;
-}
-
 .btn-primary {
-    background-color: #0284c7;
-    color: white;
+    background-color: var(--accent-brown);
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background-color: #0369a1;
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.btn-cv {
+    background-color: #5a7d5a; /* Doğal Zeytin Yeşili Tonu */
+    color: #ffffff;
+}
+
+.btn-cv:hover {
+    background-color: #436143;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border: 1px solid #334155;
-    color: #f8fafc;
+    border: 1px solid var(--accent-brown);
+    color: var(--accent-brown);
+    background-color: transparent;
 }
 
 .btn-secondary:hover {
-    background-color: #1e293b;
+    background-color: var(--accent-brown);
+    color: #ffffff;
 }
 
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Section Titles */
 .section-title {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #334155;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
 }
 
+/* 3. Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background-color: var(--bg-card);
+    padding: 1.8rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.skill-category h3 {
+    color: var(--accent-brown);
+    margin-bottom: 0.8rem;
+}
+
+.skill-category p {
+    color: var(--text-secondary);
+}
+
+/* 4. Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
 }
 
 .project-card {
-    background-color: #1e293b;
+    background-color: var(--bg-card);
     border-radius: 12px;
-    padding: 1.5rem;
-    border: 1px solid #334155;
-    transition: transform 0.3s;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(139, 90, 43, 0.12);
+}
+
+.project-img-box img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .badge {
-    background-color: #0369a1;
-    color: #e0f2fe;
+    align-self: flex-start;
+    background-color: #f3ece4;
+    color: var(--accent-brown);
     font-size: 0.8rem;
+    font-weight: 600;
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
+    margin-bottom: 0.5rem;
 }
 
 .project-card h3 {
-    margin: 0.8rem 0;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
 .tech-stack {
@@ -184,48 +294,38 @@ nav {
 }
 
 .tech-stack span {
-    background-color: #334155;
-    font-size: 0.85rem;
+    background-color: #f7f3ed;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
+    border: 1px solid var(--border-color);
 }
 
 .project-links a {
-    color: #38bdf8;
+    color: var(--accent-brown);
     text-decoration: none;
     font-weight: bold;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+.project-links a:hover {
+    text-decoration: underline;
 }
 
-.skill-category {
-    background-color: #1e293b;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.text-center {
-    text-align: center;
-}
-
+/* 5. Contact Section */
 .subtitle {
-    color: #94a3b8;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
-/* İletişim Formu Stilleri */
 .contact-wrapper {
-    max-width: 600px;
+    max-width: 580px;
     margin: 0 auto;
-    background-color: #1e293b;
+    background-color: var(--bg-card);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .contact-form {
@@ -237,37 +337,30 @@ nav {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    text-align: left;
+    gap: 0.4rem;
 }
 
 .form-group label {
     font-weight: 600;
-    color: #cbd5e1;
+    color: var(--text-primary);
 }
 
 .form-group input, .form-group textarea {
     padding: 0.8rem;
-    border-radius: 6px;
-    border: 1px solid #334155;
-    background-color: #0f172a;
-    color: #fff;
-    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
 }
 
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #38bdf8;
-}
-
-.btn-block {
-    width: 100%;
-    justify-content: center;
+    border-color: var(--accent-brown);
 }
 
 .social-links-container {
     margin-top: 2rem;
-    border-top: 1px solid #334155;
+    border-top: 1px solid var(--border-color);
     padding-top: 1.5rem;
 }
 
@@ -279,15 +372,37 @@ nav {
 }
 
 .social-links a {
-    color: #38bdf8;
+    color: var(--accent-brown);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center;
 }
 
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #020617;
-    color: #64748b;
-    margin-top: 3rem;
+    background-color: var(--bg-nav);
+    color: var(--text-secondary);
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-buttons {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+    }
 }
