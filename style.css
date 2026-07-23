@@ -2,27 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
-/* Tamamen Beyaz ve Minimal Koyu Gri Renkler */
+/* BEYAZ & MİNİMAL KOYU GRİ TEMA */
 :root {
     --bg-white: #ffffff;
-    --text-dark: #111827;
-    --text-muted: #4b5563;
-    --accent-black: #000000;
-    --border-light: #e5e7eb;
-    --card-bg: #f9fafb;
+    --bg-light: #f8fafc;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-color: #e2e8f0;
+    --accent-black: #0f172a;
 }
 
-html, body {
-    height: 100%;
+/* SAYFA SAYFA GEÇİŞ SİSTEMİ (SCROLL SNAP) */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+body {
     background-color: var(--bg-white);
     color: var(--text-dark);
-    overflow: hidden; /* Sayfa içi kaydırmayı snap-container yönetecek */
 }
 
-/* Header & Navbar */
+/* HEADER & NAVBAR */
 header {
     position: fixed;
     top: 0;
@@ -30,14 +36,14 @@ header {
     width: 100%;
     height: 70px;
     background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-    border-bottom: 1px solid var(--border-light);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
 }
 
-nav.container {
+.nav-container {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -47,17 +53,19 @@ nav.container {
     align-items: center;
 }
 
+/* Sade & Şık İsim Logosu */
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: var(--accent-black);
+    color: var(--text-dark);
     text-decoration: none;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
 .nav-links a {
@@ -69,19 +77,13 @@ nav.container {
 }
 
 .nav-links a:hover {
-    color: var(--accent-black);
+    color: var(--text-dark);
 }
 
-/* Sayfa Sayfa Geçiş (Scroll Snap Engine) */
-.snap-container {
+/* EKRANI TAM KAPLAYAN SAYFA BÖLÜMLERİ */
+.page-section {
     height: 100vh;
-    overflow-y: mandatory;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-.snap-section {
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
@@ -91,54 +93,53 @@ nav.container {
     background-color: var(--bg-white);
 }
 
-.container-content {
-    max-width: 1000px;
+.content-box {
     width: 100%;
+    max-width: 1000px;
 }
 
-/* Typography & Titles */
 .section-title {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--border-light);
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.4rem;
 }
 
 .highlight {
-    color: var(--accent-black);
-    border-bottom: 3px solid var(--accent-black);
+    color: var(--text-dark);
+    border-bottom: 3px solid var(--text-dark);
 }
 
-/* Home Section */
-.welcome-content {
-    text-align: center;
-    max-width: 750px;
-}
+/* HOME SECTION */
+.text-center { text-align: center; }
+.justify-center { justify-content: center; }
 
-.welcome-content h1 {
+#home h1 {
     font-size: 2.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
 }
 
-.welcome-content h2 {
+#home h2 {
     font-size: 1.25rem;
     color: var(--text-muted);
     font-weight: 500;
     margin-bottom: 1.2rem;
 }
 
-.welcome-content p {
+#home p {
     color: var(--text-muted);
     font-size: 1.05rem;
-    margin-bottom: 2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
 }
 
-/* About Section */
-.about-wrapper {
+/* ABOUT SECTION */
+.about-grid {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 .profile-img-container img {
@@ -146,24 +147,25 @@ nav.container {
     height: 190px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--accent-black);
+    border: 3px solid var(--text-dark);
 }
 
 .about-text p {
     color: var(--text-muted);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 1.5rem;
 }
 
-.about-buttons {
+/* BUTTONS */
+.btn-group {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-/* Buttons */
 .btn {
-    padding: 0.7rem 1.3rem;
+    padding: 0.75rem 1.4rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -171,34 +173,39 @@ nav.container {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    border: none;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .btn-primary {
     background-color: var(--accent-black);
     color: #ffffff;
-    border: 1px solid var(--accent-black);
 }
 
 .btn-primary:hover {
-    background-color: #333;
+    background-color: #334155;
+    transform: translateY(-2px);
 }
 
 .btn-cv {
     background-color: #10b981;
     color: #ffffff;
-    border: none;
+}
+
+.btn-cv:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
     color: var(--text-dark);
     background-color: var(--bg-white);
 }
 
 .btn-secondary:hover {
-    background-color: var(--card-bg);
+    background-color: var(--bg-light);
 }
 
 .btn-block {
@@ -206,41 +213,41 @@ nav.container {
     justify-content: center;
 }
 
-/* Skills Grid */
+/* SKILLS SECTION */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-.skill-category {
-    background-color: var(--card-bg);
-    padding: 1.5rem;
+.skill-card {
+    background-color: var(--bg-light);
+    padding: 1.6rem;
     border-radius: 8px;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
 }
 
-.skill-category h3 {
+.skill-card h3 {
     margin-bottom: 0.6rem;
     font-size: 1.1rem;
 }
 
-.skill-category p {
+.skill-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
 }
 
-/* Projects Grid */
+/* PROJECTS SECTION */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 1.5rem;
 }
 
 .project-card {
-    background-color: var(--card-bg);
+    background-color: var(--bg-light);
     border-radius: 8px;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
@@ -248,7 +255,7 @@ nav.container {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .project-info {
@@ -259,7 +266,7 @@ nav.container {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--text-muted);
-    background-color: #e5e7eb;
+    background-color: #e2e8f0;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
 }
@@ -283,26 +290,26 @@ nav.container {
 .tech-stack span {
     font-size: 0.75rem;
     background-color: var(--bg-white);
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
 }
 
-.project-links a {
-    color: var(--accent-black);
+.project-link {
+    color: var(--text-dark);
     font-weight: 700;
     text-decoration: none;
     font-size: 0.85rem;
 }
 
-/* Contact Section */
-.contact-wrapper {
+/* CONTACT SECTION */
+.contact-card {
     max-width: 500px;
     margin: 0 auto;
-    background-color: var(--card-bg);
-    padding: 1.5rem;
+    background-color: var(--bg-light);
+    padding: 1.8rem;
     border-radius: 8px;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
 }
 
 .contact-form {
@@ -323,35 +330,30 @@ nav.container {
 }
 
 .form-group input, .form-group textarea {
-    padding: 0.6rem;
-    border: 1px solid var(--border-light);
-    border-radius: 4px;
+    padding: 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
     background-color: var(--bg-white);
 }
 
-.social-links-container {
-    margin-top: 1rem;
-    border-top: 1px solid var(--border-light);
-    padding-top: 1rem;
-}
-
 .social-links {
+    margin-top: 1.2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
 }
 
 .social-links a {
-    color: var(--accent-black);
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 600;
 }
 
-.text-center { text-align: center; }
-
-/* Responsive */
+/* MOBİL UYUM */
 @media (max-width: 768px) {
-    .about-wrapper { flex-direction: column; text-align: center; }
-    .snap-section { height: auto; min-height: 100vh; padding-top: 90px; }
-    .snap-container { overflow-y: scroll; scroll-snap-type: none; } /* Mobilde rahat kaydırma */
+    html { scroll-snap-type: none; } /* Mobilde rahat kullanım için tekli kaydırmayı kapat */
+    .page-section { height: auto; min-height: 100vh; padding-top: 90px; padding-bottom: 40px; }
+    .about-grid { flex-direction: column; text-align: center; }
 }
