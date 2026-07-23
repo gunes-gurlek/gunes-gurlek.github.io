@@ -380,3 +380,20 @@ body {
     .hero-title { font-size: 2.2rem; }
     .section { min-height: auto; padding: 4rem 1.5rem; }
 }
+
+/* Instagram Embed Styling */
+.instagram-embed-box {
+    margin: 0.8rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-white);
+}
+
+.project-links-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
