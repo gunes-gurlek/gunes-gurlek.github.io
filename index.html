@@ -9,11 +9,10 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <nav class="nav-container">
-            <!-- Sade ve Şık Logo / İsim -->
-            <a href="#home" class="logo">Güneş Gürlek</a>
+    <!-- Fixed Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Güneş Gürlek</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -21,125 +20,137 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <!-- SECTION 1: HOME -->
-    <section id="home" class="page-section">
-        <div class="content-box text-center">
-            <h1>Hello, I'm <span class="highlight">Güneş Gürlek</span> 👋</h1>
-            <h2>Computer Engineer | Flutter Developer | AI Enthusiast</h2>
-            <p>Computer Engineering graduate passionate about mobile application development, computer vision, and AI-powered software. I enjoy building practical solutions that make everyday life easier.</p>
-            <div class="btn-group justify-center">
-                <a href="#about" class="btn btn-primary">Learn More About Me</a>
-            </div>
-        </div>
-    </section>
+    <!-- Page Container -->
+    <main class="page-container">
 
-    <!-- SECTION 2: ABOUT -->
-    <section id="about" class="page-section">
-        <div class="content-box">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="profile-img-container">
-                    <img src="profile.jpeg" alt="Güneş Gürlek" onerror="this.src='GunesGurlek.Vesikal%C4%B1k.jpeg'">
-                </div>
-                <div class="about-text">
-                    <p>I recently graduated from Başkent University with a Bachelor's degree in Computer Engineering. My interests include Flutter development, computer vision, artificial intelligence, embedded systems, and image processing. My graduation project, <strong>SafeStep</strong>, is an AI-powered smart glasses system designed to assist visually impaired individuals through real-time object detection and voice guidance.</p>
-                    <div class="btn-group">
-                        <a href="GunesGURLEK.CV.pdf" download class="btn btn-cv"><i class="fas fa-file-download"></i> Download CV</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
+        <!-- 1. HOME SECTION -->
+        <section id="home" class="section">
+            <div class="section-content text-center">
+                <h1 class="hero-title">Hello, I'm <span class="highlight">Güneş Gürlek</span> 👋</h1>
+                <h2 class="hero-subtitle">Computer Engineer | Flutter Developer | AI Enthusiast</h2>
+                <p class="hero-desc">Computer Engineering graduate passionate about mobile application development, computer vision, and AI-powered software. I enjoy building practical solutions that make everyday life easier.</p>
+                <div class="btn-group justify-center">
+                    <a href="#about" class="btn btn-dark">Learn More About Me</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION 3: SKILLS -->
-    <section id="skills" class="page-section">
-        <div class="content-box">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3><i class="fas fa-mobile-alt"></i> Mobile & Software</h3>
-                    <p>Flutter, Dart, Android Studio, Firebase, REST API Integration, Responsive UI</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-code"></i> Languages & Tools</h3>
-                    <p>Python, C++, C#, Git, GitHub, SQL, Visual Studio Code</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-microchip"></i> AI & Embedded Systems</h3>
-                    <p>Computer Vision, Object Detection, YOLO, Image Processing, Embedded Systems</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: PROJECTS -->
-    <section id="projects" class="page-section">
-        <div class="content-box">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-img-box">
-                        <img src="safestep.png" alt="SafeStep" onerror="this.src='https://via.placeholder.com/400x200?text=SafeStep+Smart+Glasses'">
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="profile-frame">
+                        <img src="profile.jpeg" alt="Güneş Gürlek" onerror="this.src='GunesGurlek.Vesikal%C4%B1k.jpeg'">
                     </div>
-                    <div class="project-info">
-                        <span class="badge">Graduation Project • AI</span>
-                        <h3>SafeStep – AI Smart Glasses</h3>
-                        <p>Intelligent wearable system providing real-time voice guidance using computer vision for the visually impaired.</p>
-                        <div class="tech-stack"><span>Python</span><span>YOLO</span><span>Computer Vision</span></div>
-                        <a href="https://drive.google.com/drive/folders/1QSYQeklTd8UgZjtH1t91Lgj-W8PysDJG?usp=sharing" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                    <div class="about-text">
+                        <p>I recently graduated from Başkent University with a Bachelor's degree in Computer Engineering. My interests include Flutter development, computer vision, artificial intelligence, embedded systems, and image processing.</p>
+                        <p>My graduation project, <strong>SafeStep</strong>, is an AI-powered smart glasses system designed to assist visually impaired individuals through real-time object detection and voice guidance.</p>
+                        <div class="btn-group mt-2">
+                            <a href="GunesGURLEK.CV.pdf" download class="btn btn-green"><i class="fas fa-file-download"></i> Download CV</a>
+                            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img-box">
-                        <img src="snapmap.png" alt="SnapMap" onerror="this.src='https://via.placeholder.com/400x200?text=SnapMap+App'">
-                    </div>
-                    <div class="project-info">
-                        <span class="badge">Mobile Application</span>
-                        <h3>SnapMap – Location Photo Sharing</h3>
-                        <p>A Flutter application enabling users to share location-tagged photos on an interactive map using Firebase.</p>
-                        <div class="tech-stack"><span>Flutter</span><span>Firebase</span><span>Google Maps</span></div>
-                        <a href="https://github.com/gunes-gurlek/SnapMap.git" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: CONTACT -->
-    <section id="contact" class="page-section">
-        <div class="content-box">
-            <h2 class="section-title text-center">Contact Me</h2>
-            <div class="contact-card">
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Your Email</label>
-                        <input type="email" name="email" placeholder="john@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
-
-                <div class="social-links text-center">
-                    <a href="https://www.linkedin.com/in/gunes-gurlek/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="mailto:gunesgurlek@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- 3. SKILLS SECTION -->
+        <section id="skills" class="section">
+            <div class="section-content">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile & Software</h3>
+                        <p>Flutter, Dart, Android Studio, Firebase, REST API Integration, Responsive UI</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Languages & Tools</h3>
+                        <p>Python, C++, C#, Git, GitHub, SQL, Visual Studio Code</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>AI & Embedded Systems</h3>
+                        <p>Computer Vision, Object Detection, YOLO, Image Processing, Embedded Systems</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="safestep.png" alt="SafeStep" onerror="this.src='https://via.placeholder.com/400x200?text=SafeStep+Smart+Glasses'">
+                        </div>
+                        <div class="project-details">
+                            <span class="tag">Graduation Project • AI</span>
+                            <h3>SafeStep – AI Smart Glasses</h3>
+                            <p>Intelligent wearable system providing real-time voice guidance using computer vision for the visually impaired.</p>
+                            <div class="tech-tags">
+                                <span>Python</span><span>YOLO</span><span>OpenCV</span>
+                            </div>
+                            <a href="https://drive.google.com/drive/folders/1QSYQeklTd8UgZjtH1t91Lgj-W8PysDJG?usp=sharing" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="snapmap.png" alt="SnapMap" onerror="this.src='https://via.placeholder.com/400x200?text=SnapMap+App'">
+                        </div>
+                        <div class="project-details">
+                            <span class="tag">Mobile Application</span>
+                            <h3>SnapMap – Location Photo Sharing</h3>
+                            <p>A Flutter application enabling users to share location-tagged photos on an interactive map using Firebase.</p>
+                            <div class="tech-tags">
+                                <span>Flutter</span><span>Firebase</span><span>Maps API</span>
+                            </div>
+                            <a href="https://github.com/gunes-gurlek/SnapMap.git" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2 class="section-title text-center">Contact Me</h2>
+                <div class="contact-card">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="3" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-full"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                    <div class="social-box">
+                        <a href="https://www.linkedin.com/in/gunes-gurlek/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="mailto:gunesgurlek@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
