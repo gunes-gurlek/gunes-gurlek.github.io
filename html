@@ -22,13 +22,19 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero container">
+    <!-- Hero Section (Resim + Özgeçmiş + CV İndir) -->
+    <section id="about" class="hero container">
+        <div class="hero-profile-img">
+            <!-- Profil resminizi proje klasörüne "profile.jpg" olarak kaydedip buraya bağlayabilirsiniz -->
+            <img src="profile.jpg" alt="Güneş Gürlek" onerror="this.src='https://via.placeholder.com/220?text=G%C3%BCne%C5%9F+G%C3%BCrlek'">
+        </div>
         <div class="hero-content">
             <h1>Merhaba, Ben <span class="highlight">Güneş Gürlek</span> 👋</h1>
             <h2>Bilgisayar Mühendisi & Mobil Uygulama Geliştirici</h2>
-            <p>Mobil uygulama geliştirme (Flutter), yapay zeka entegrasyonları ve yenilikçi teknolojiler üzerine çözümler üretiyorum.</p>
+            <p>Başkent Üniversitesi Bilgisayar Mühendisliği mezunuyum. Mobil uygulama geliştirme (Flutter), yapay zeka entegrasyonları, görüntü işleme ve gömülü sistemler üzerine yenilikçi çözümler üretiyorum.</p>
             <div class="hero-buttons">
+                <!-- CV İndirme Butonu: CV dosyanızı proje klasörüne "Gunes_Gurlek_CV.pdf" adıyla ekleyin -->
+                <a href="Gunes_Gurlek_CV.pdf" download class="btn btn-cv"><i class="fas fa-file-download"></i> CV'mi İndir</a>
                 <a href="#projects" class="btn btn-primary">Projelerimi İncele</a>
                 <a href="#contact" class="btn btn-secondary">İletişime Geç</a>
             </div>
@@ -89,19 +95,42 @@
             </div>
             <div class="skill-category">
                 <h3>Diller & Araçlar</h3>
-                <p>Git, GitHub, Firebase, Python, C++ / C#</p>
+                <p>Python, C++, C#, Git, GitHub, Firebase</p>
             </div>
         </div>
     </section>
 
-    <!-- İletişim -->
-    <section id="contact" class="container text-center">
-        <h2 class="section-title">İletişime Geçin</h2>
-        <p>Projelerim hakkında konuşmak veya iş birliği yapmak için bana ulaşabilirsiniz.</p>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/kullaniciadi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/kullaniciadi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="mailto:epostaniz@gmail.com"><i class="fas fa-envelope"></i> E-posta Gönder</a>
+    <!-- İletişim Formu ve Mail Yollama -->
+    <section id="contact" class="container">
+        <h2 class="section-title text-center">Bana Mesaj Gönderin</h2>
+        <p class="text-center subtitle">Projelerim hakkında konuşmak veya iş birliği yapmak için doğrudan bana mail atabilirsiniz.</p>
+        
+        <div class="contact-wrapper">
+            <!-- Formspree Entegrasyonu: action kısmına kendi formspree linkinizi veya mailto adresinizi ekleyebilirsiniz -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" name="name" placeholder="Örn: Ahmet Yılmaz" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" name="email" placeholder="ahmet@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Mesajı Gönder</button>
+            </form>
+
+            <div class="social-links-container text-center">
+                <h3>Diğer Bağlantılar</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/kullaniciadi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/kullaniciadi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:epostaniz@gmail.com"><i class="fas fa-envelope"></i> Doğrudan E-posta</a>
+                </div>
+            </div>
         </div>
     </section>
 
