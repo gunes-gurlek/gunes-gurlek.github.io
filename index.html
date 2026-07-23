@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Güneş Gürlek | Bilgisayar Mühendisi</title>
+    <title>Güneş Gürlek | Computer Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,63 +12,97 @@
     <!-- Header / Navbar -->
     <header>
         <nav class="container">
-            <a href="#" class="logo">&lt;GunesGurlek /&gt;</a>
+            <a href="#home" class="logo">&lt;GunesGurlek /&gt;</a>
             <ul class="nav-links">
-                <li><a href="#about">Hakkımda</a></li>
-                <li><a href="#projects">Projeler</a></li>
-                <li><a href="#skills">Yetenekler</a></li>
-                <li><a href="#contact">İletişim</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section (Resim + Özgeçmiş + CV İndir) -->
-    <section id="about" class="hero container">
-        <div class="hero-profile-img">
-            <img src="GunesGurlek.Vesikalık.jpeg" alt="Güneş Gürlek" onerror="this.src='https://via.placeholder.com/220?text=G%C3%BCne%C5%9F+G%C3%BCrlek'">
+    <!-- 1. Welcome / Hero Section -->
+    <section id="home" class="hero-welcome container">
+        <div class="welcome-content">
+            <h1>Hello, I'm <span class="highlight">Güneş Gürlek</span> 👋</h1>
+            <h2>Computer Engineer & Mobile Developer</h2>
+            <p>Welcome to my personal portfolio! I craft innovative mobile applications and smart software solutions.</p>
+            <a href="#about" class="btn btn-primary">Learn More About Me</a>
         </div>
-        <div class="hero-content">
-            <h1>Merhaba, Ben <span class="highlight">Güneş Gürlek</span> 👋</h1>
-            <h2>Bilgisayar Mühendisi & Mobil Uygulama Geliştirici</h2>
-            <p>Başkent Üniversitesi Bilgisayar Mühendisliği mezunuyum. Mobil uygulama geliştirme (Flutter), yapay zeka entegrasyonları, görüntü işleme ve gömülü sistemler üzerine yenilikçi çözümler üretiyorum.</p>
-            <div class="hero-buttons">
-                <!-- CV İndirme Butonu: CV dosyanızı proje klasörüne "Gunes_Gurlek_CV.pdf" adıyla ekleyin -->
-                <a href="GunesGURLEK.CV.pdf" download class="btn btn-cv"><i class="fas fa-file-download"></i> CV'mi İndir</a>
-                <a href="#projects" class="btn btn-primary">Projelerimi İncele</a>
-                <a href="#contact" class="btn btn-secondary">İletişime Geç</a>
+    </section>
+
+    <!-- 2. About Section (Picture & Bio & CV) -->
+    <section id="about" class="container section-padding">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-wrapper">
+            <div class="profile-img-container">
+                <img src="GunesGurlek.Vesikalık.jpeg" alt="Güneş Gürlek" onerror="this.src='https://via.placeholder.com/220?text=G%C3%BCne%C5%9F+G%C3%BCrlek'">
+            </div>
+            <div class="about-text">
+                <p>I graduated from Başkent University with a degree in Computer Engineering. I specialize in mobile application development (Flutter), artificial intelligence integration, image processing, and embedded systems.</p>
+                <div class="about-buttons">
+                    <a href="GunesGURLEK.CV.pdf" download class="btn btn-cv"><i class="fas fa-file-download"></i> Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projeler -->
-    <section id="projects" class="container">
-        <h2 class="section-title">Öne Çıkan Projeler</h2>
+    <!-- 3. Technical Skills Section -->
+    <section id="skills" class="container section-padding">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile & Software</h3>
+                <p>Flutter, Dart, Android Studio, REST API Integration</p>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Languages & Tools</h3>
+                <p>Python, C++, C#, Git, GitHub, Firebase</p>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-microchip"></i> Hardware & AI</h3>
+                <p>Embedded Systems, Object Detection, Computer Vision</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Projects Section (Images & Links) -->
+    <section id="projects" class="container section-padding">
+        <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             
-            <!-- SafeStep -->
+            <!-- SafeStep Project Card -->
             <div class="project-card">
+                <div class="project-img-box">
+                    <img src="safestep.png" alt="SafeStep Project" onerror="this.src='https://via.placeholder.com/400x200?text=SafeStep+Smart+Glasses'">
+                </div>
                 <div class="project-info">
-                    <span class="badge">Donanım & AI Entegrasyonu</span>
-                    <h3>SafeStep – Akıllı Gözlük Sistemi</h3>
-                    <p>Görme engelli bireylerin günlük hayattaki engelleri ve tehlikeleri fark etmesini sağlayan, gerçek zamanlı nesne tespiti ve sesli geri bildirim sunan akıllı gözlük sistemi.</p>
+                    <span class="badge">Hardware & AI</span>
+                    <h3>SafeStep – Smart Glass System</h3>
+                    <p>An assistive smart glass system designed for visually impaired individuals, providing real-time object detection and audio guidance for safe navigation.</p>
                     <div class="tech-stack">
                         <span>Object Detection</span>
                         <span>Embedded Systems</span>
                         <span>Python</span>
-                        <span>Audio Feedback</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://github.com" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
                     </div>
                 </div>
             </div>
 
-            <!-- SnapMap -->
+            <!-- SnapMap Project Card -->
             <div class="project-card">
+                <div class="project-img-box">
+                    <img src="snapmap.png" alt="SnapMap Project" onerror="this.src='https://via.placeholder.com/400x200?text=SnapMap+App'">
+                </div>
                 <div class="project-info">
-                    <span class="badge">Mobil Uygulama</span>
-                    <h3>SnapMap – Konum Bazlı Fotoğraf Paylaşımı</h3>
-                    <p>Kullanıcıların harita üzerinde anlık konumlarına bağlı olarak fotoğraf paylaşmalarına ve çevrelerindeki anları keşfetmelerine olanak tanıyan gerçek zamanlı mobil uygulama.</p>
+                    <span class="badge">Mobile App</span>
+                    <h3>SnapMap – Location-Based Photo Sharing</h3>
+                    <p>A real-time mobile application enabling users to discover and share location-tagged photos interactively on a map interface.</p>
                     <div class="tech-stack">
                         <span>Flutter</span>
                         <span>Dart</span>
@@ -76,7 +110,7 @@
                         <span>Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://github.com" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
                     </div>
                 </div>
             </div>
@@ -84,57 +118,40 @@
         </div>
     </section>
 
-    <!-- Yetenekler -->
-    <section id="skills" class="container">
-        <h2 class="section-title">Teknik Yetenekler</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Mobil & Yazılım</h3>
-                <p>Flutter, Dart, Android Studio, REST API Entegrasyonları</p>
-            </div>
-            <div class="skill-category">
-                <h3>Diller & Araçlar</h3>
-                <p>Python, C++, C#, Git, GitHub, Firebase</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- İletişim Formu ve Mail Yollama -->
-    <section id="contact" class="container">
-        <h2 class="section-title text-center">Bana Mesaj Gönderin</h2>
-        <p class="text-center subtitle">Projelerim hakkında konuşmak veya iş birliği yapmak için doğrudan bana mail atabilirsiniz.</p>
+    <!-- 5. Contact Section -->
+    <section id="contact" class="container section-padding">
+        <h2 class="section-title text-center">Contact Me</h2>
+        <p class="text-center subtitle">Feel free to reach out for collaborations, opportunities, or just a friendly chat.</p>
         
         <div class="contact-wrapper">
-            <!-- Formspree Entegrasyonu: action kısmına kendi formspree linkinizi veya mailto adresinizi ekleyebilirsiniz -->
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
                 <div class="form-group">
-                    <label for="name">Adınız Soyadınız</label>
-                    <input type="text" id="name" name="name" placeholder="Örn: Ahmet Yılmaz" required>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-posta Adresiniz</label>
-                    <input type="email" id="email" name="email" placeholder="ahmet@example.com" required>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mesajınız</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Mesajı Gönder</button>
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
             </form>
 
             <div class="social-links-container text-center">
-                <h3>Diğer Bağlantılar</h3>
+                <h3>Direct Links</h3>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/kullaniciadi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/kullaniciadi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="mailto:epostaniz@gmail.com"><i class="fas fa-envelope"></i> Doğrudan E-posta</a>
+                    <a href="https://www.linkedin.com/in/gunes-gurlek/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="mailto:gunesgurlek@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Güneş Gürlek. Tüm hakları saklıdır.</p>
+        <p>© 2026 Güneş Gürlek. All rights reserved.</p>
     </footer>
 
 </body>
