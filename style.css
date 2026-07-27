@@ -298,6 +298,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+/* PROJECT LINKS (YAN YANA DİZİLİM) */
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
 
 .tag {
     font-size: 0.75rem;
