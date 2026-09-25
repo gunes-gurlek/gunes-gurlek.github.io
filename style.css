@@ -335,17 +335,6 @@ body {
 
     background-color: #03070c;
 
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(3, 7, 12, 0.99) 0%,
-            rgba(3, 7, 12, 0.96) 22%,
-            rgba(3, 7, 12, 0.78) 46%,
-            rgba(3, 7, 12, 0.38) 72%,
-            rgba(3, 7, 12, 0.30) 100%
-        ),
-        url("./background.png");
-
     background-size: cover;
 
     background-position:
@@ -1512,14 +1501,6 @@ body {
                 100vh -
                 var(--navbar-height)
             );
-
-        background-image:
-            linear-gradient(
-                90deg,
-                rgba(3, 7, 12, 0.96),
-                rgba(3, 7, 12, 0.83)
-            ),
-            url("./background.png");
 
         background-position:
             65% center;
