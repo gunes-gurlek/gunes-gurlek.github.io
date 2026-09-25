@@ -1519,7 +1519,7 @@ body {
                 rgba(3, 7, 12, 0.96),
                 rgba(3, 7, 12, 0.83)
             ),
-            url("world-bg.png");
+            url("./background.png");
 
         background-position:
             65% center;
